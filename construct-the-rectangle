@@ -1,0 +1,11 @@
+int* constructRectangle(int area, int* returnSize){
+    *returnSize = 2;
+    int * result = (int *)malloc(2 * sizeof(int));
+    for(int i=1; i<=sqrt(area); i++)
+        if(area%i == 0)
+        {
+            result[0] = area/i;
+            result[1] = i;
+        }   
+    return result;
+}
